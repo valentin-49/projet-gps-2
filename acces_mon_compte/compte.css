@@ -1,0 +1,28 @@
+html {height:100%;}
+body {height:100%;
+padding: 0%; margin: 0.25%;
+width: auto;
+height: auto;
+color: crimson;
+background-color: black;
+background-image: url(../image/Earth-view-of-the-cosmos-Hd-wallpaper.jpg);
+background-size: cover;
+background-position-x: center;
+}
+.en-tete{
+    background-color: rgb(255, 255, 255);
+    border-radius: 20%;
+    border-color: crimson;
+    border-style: double;
+    margin-top: 2%;
+}
+.bouton{
+    margin-top: 12%;
+    border-radius: 11%;
+    width: auto;
+    height: 50px;
+    background-color: rgb(255, 255, 255);
+    font-weight: bold;
+    border-style: double;
+    border-color: black;
+}

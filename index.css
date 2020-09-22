@@ -1,0 +1,74 @@
+html {height:100%;}
+body {height:100%;
+padding: 0%; margin: 0.25%;
+width: auto;
+height: auto;
+color: crimson;
+background-color: black;
+background-image: url(image/Earth-view-of-the-cosmos-Hd-wallpaper.jpg);
+background-size: cover;
+background-position-x: center;
+}
+
+.en-tete{
+    background-color: whitesmoke;
+    border-radius: 20%;
+    margin-top: 2%;
+}
+.formulaire_de_connexion{
+    margin-top: 5%;
+    background-color: whitesmoke;
+    border-radius: 10%;
+    border-color: black;
+    border-style: double;
+    height: auto;
+    width: auto;  
+}
+.bouton{
+    margin-top: 5%;
+    border-radius: 11%;
+    width: auto;
+    height: 50px;
+    background-color: rgb(255, 255, 255);
+    font-weight: bold;
+    border-style: double;
+    border-color: black;
+}
+.bouton_redirect{
+    margin-top: 4%;
+    border-radius: 11%;
+    width: auto;
+    height: 50px;
+    background-color: rgb(255, 255, 255);
+    font-weight: bold;
+    border-style: double;
+    border-color: black;
+}
+.text{
+    margin-top: 1%;
+    width: 60%;
+    border-color: black;
+    border-style: double;
+}
+
+.image{
+    border-radius: 5%;
+    background-image: url(image/1.jpg);
+    margin-top: 5%;
+    background-size: cover;
+    background-position-x: center;  
+    border-color: rgb(0, 0, 0);
+    border-style: double;
+    width: 852px;
+    height: 480px;
+}
+
+.redirection{
+    margin-top: 5%;
+    border-color: rgb(0, 0, 0);
+    border-style: double;
+    border-radius: 5%;
+    background-color: whitesmoke;
+    font: bolder;
+}
+
