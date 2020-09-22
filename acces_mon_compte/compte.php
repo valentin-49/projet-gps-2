@@ -27,7 +27,7 @@ session_start();
         
     }else{
         $maBase=new PDO('mysql:host=localhost; dbname=projet_gps; charset=utf8','root','');
-        $LesUsers = $maBase->query('INSERT INTO `navire`(`nom_navire`, `marque_navire`, `pavillon`, `type`) VALUES ("'.$_POST['new_ID'].'","'.$_POST['new_marque'].'","'.$_POST['new_pavillon'].'","'.$_POST['new_type'].'")');
+        $LesUsers = $maBase->query('INSERT INTO `navire`(`nom_navire`, `marque_navire`, `pavillon`, `type`, `user`) VALUES ("'.$_POST['new_ID'].'","'.$_POST['new_marque'].'","'.$_POST['new_pavillon'].'","'.$_POST['new_type'].'", "'.$_SESSION['LogUser'].'")');
 
         echo"<p><h3>navire ajouter</h3></p>";
     }                 
@@ -95,7 +95,6 @@ if(isset($_SESSION["isconnectUS"]) && $_SESSION["isconnectUS"]==true && isset($_
                         <div class="col-5 en-tete" align="center">
                             
                         </div>
-
                     </div>
                 </div>
             </div>
