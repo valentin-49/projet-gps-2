@@ -16,6 +16,7 @@ if(isset($_SESSION["isconnectAD"]) || $_SESSION["isconnectAD"]==true){
         <script type="text/javascript" src="admin.js"></script>
         <link rel="stylesheet" type="text/css" href="../bootstrap-4.4.1-dist/css/bootstrap.css">
         <link rel="stylesheet" type="text/css" href="admin.css">
+        <link rel="shortcut icon" href="../image/unnamed.png" />
     </head>
     <body>
         <div class="container">
@@ -72,6 +73,7 @@ if(isset($_SESSION["isconnectAD"]) || $_SESSION["isconnectAD"]==true){
     <head>
         <script type="text/javascript" src="admin.js"></script>
         <link rel="stylesheet" type="text/css" href="../bootstrap-4.4.1-dist/css/bootstrap.css">
+        <link rel="shortcut icon" href="../image/unnamed.png" />
     </head>
     <body onload="redirect()">
         <div class="container">

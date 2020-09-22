@@ -23,6 +23,16 @@ session_start();
     }                 
 ?>
 <?php
+    if(empty($_POST['Valider'])){
+        
+    }else{
+        $maBase=new PDO('mysql:host=localhost; dbname=projet_gps; charset=utf8','root','');
+        $LesUsers = $maBase->query('INSERT INTO `navire`(`nom_navire`, `marque_navire`, `pavillon`, `type`) VALUES ("'.$_POST['new_ID'].'","'.$_POST['new_marque'].'","'.$_POST['new_pavillon'].'","'.$_POST['new_type'].'")');
+
+        echo"<p><h3>navire ajouter</h3></p>";
+    }                 
+?>
+<?php
  if(isset($_POST['deco'])){ 
     session_unset();
     session_destroy();
@@ -33,6 +43,7 @@ if(isset($_SESSION["isconnectUS"]) && $_SESSION["isconnectUS"]==true && isset($_
     <head>
         <link rel="stylesheet" type="text/css" href="../bootstrap-4.4.1-dist/css/bootstrap.css">
         <link rel="stylesheet" type="text/css" href="compte.css">
+        <link rel="shortcut icon" href="../image/unnamed.png" />
     </head>
         <body>
             <div class="container">
@@ -56,10 +67,35 @@ if(isset($_SESSION["isconnectUS"]) && $_SESSION["isconnectUS"]==true && isset($_
                             <form action="compte.php" method="POST">
                                 <label><h4>Nouveau mot de passe</h4></label>
                                 <p><input type="text" value="" name="Nv_MDP_1" width="auto" class="text" required/></p>
-                                <p><input type="submit" name="Valider" value="Valider" class="bouton"/></p>
+                                <p><input type="submit" name="Valider" value="Valider" class="bouton_2"/></p>
                             </form>
                         <h1>--------------------</h1>
                         </div>
+                        <div class="col-5 en-tete" align="center">
+                            <form method="POST"><input type="submit" name="add_navire" value="ajouter un navire" class="bouton_2"/></form>
+                        <?php
+                            if(isset($_POST['add_navire'])){
+                                ?>
+                                <form action="compte.php" method="POST">
+                                    <label><h3>Nom du navire</h3></label>
+                                    <p><input type="text" value="" name="new_ID" width="auto" class="text" required/></p>
+                                    <label><h3>Marque du navire</h3></label>
+                                    <p><input type="text" value="" name="new_marque" width="auto" class="text" required/></p>
+                                    <label><h3>pavillon</h3></label>
+                                    <p><input type="text" value="" name="new_pavillon" width="auto" class="text" required/></p>
+                                    <label><h3>Type du navire</h3></label>
+                                    <p><input type="text" value="" name="new_type" class="text" required/></p>
+                                    <p><input type="submit" name="Valider" value="Valider" class="bouton_2"/></p>
+                                </form>
+                            <?php
+                                }
+                            ?>
+                        </div>
+                        <div class="col-2"></div>
+                        <div class="col-5 en-tete" align="center">
+                            
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -74,6 +110,7 @@ if(isset($_SESSION["isconnectUS"]) && $_SESSION["isconnectUS"]==true && isset($_
     <head>
         <script type="text/javascript" src="compte.js"></script>
         <link rel="stylesheet" type="text/css" href="../bootstrap-4.4.1-dist/css/bootstrap.css">
+        <link rel="shortcut icon" href="../image/unnamed.png" />
     </head>
     <body onload="redirect()">
         <div class="container">
