@@ -72,6 +72,10 @@ if(isset($_SESSION["isconnectUS"]) && $_SESSION["isconnectUS"]==true && isset($_
                         <h1>--------------------</h1>
                         </div>
                         <div class="col-5 en-tete" align="center">
+                            
+                        </div>
+                        <div class="col-2"></div>
+                        <div class="col-5 en-tete" align="center">
                             <form method="POST"><input type="submit" name="add_navire" value="ajouter un navire" class="bouton_2"/></form>
                         <?php
                             if(isset($_POST['add_navire'])){
@@ -90,10 +94,6 @@ if(isset($_SESSION["isconnectUS"]) && $_SESSION["isconnectUS"]==true && isset($_
                             <?php
                                 }
                             ?>
-                        </div>
-                        <div class="col-2"></div>
-                        <div class="col-5 en-tete" align="center">
-                            
                         </div>
                     </div>
                 </div>
